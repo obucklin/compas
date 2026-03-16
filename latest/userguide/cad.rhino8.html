@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/css/compas.css?v=617b33e2" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../_static/tabs.css?v=4c969af8" />
-    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=9c3e77be" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -48,7 +48,7 @@
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="../_static/togglebutton.js?v=1ae7504c"></script>
     <script src="../_static/design-tabs.js?v=f930bc37"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
@@ -104,12 +104,6 @@
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
 </form></div>
   </div>
-
-
-  <div class="bd-header-announcement container-fluid bd-header-announcement">
-    <div class="bd-header-announcement__content">This is the documentation of the first stable release of COMPAS 2. If you have feedback, please give it here: <a href='https://github.com/compas-dev/compas/issues'>COMPAS issue tracker</a>.</div>
-  </div>
-
   
     <nav class="bd-header navbar navbar-expand-lg bd-navbar">
 <div class="bd-header__inner bd-page-width">
@@ -588,6 +582,36 @@ $<span class="w"> </span>~/.rhinocode/py39-rh8/python3.9<span class="w"> </span>
 </pre></div>
 </div>
 </section>
+<section id="experimental-method">
+<h2>Experimental Method</h2>
+<p>COMPAS now makes the <cite>install_in_rhino</cite> command line utility available to simplify the installation of Python packages in Rhino 8 CPython.
+This utility is available after installing the main <cite>compas</cite> package:</p>
+<p>Install any Python package from PyPI</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>install_in_rhino<span class="w"> </span>requests<span class="w"> </span>numpy
+</pre></div>
+</div>
+<p>Install from the current directory</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>install_in_rhino<span class="w"> </span>.
+</pre></div>
+</div>
+<p>Install from a local path</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>install_in_rhino<span class="w"> </span>path/to/package
+</pre></div>
+</div>
+<p>Install from a requirements file</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>install_in_rhino<span class="w"> </span>-r<span class="w"> </span>requirements.txt
+</pre></div>
+</div>
+<p>Install in a specific site environment.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>install_in_rhino<span class="w"> </span>compas<span class="w"> </span>--env<span class="w"> </span>compas-dev
+</pre></div>
+</div>
+<p>Clear the site environment before installing</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>install_in_rhino<span class="w"> </span>compas<span class="w"> </span>--env<span class="w"> </span>compas-dev<span class="w"> </span>--clear
+</pre></div>
+</div>
+<p>For more information, see <code class="xref py py-func docutils literal notranslate"><span class="pre">compas_rhino.install_with_pip.install_in_rhino_with_pip()</span></code>.</p>
+</section>
 <section id="verification">
 <h2>Verification</h2>
 <p>In Rhino 8, open the Python editor (just type <code class="docutils literal notranslate"><span class="pre">ScriptEditor</span></code>), open an new <code class="docutils literal notranslate"><span class="pre">Python</span> <span class="pre">3</span></code> edito tab, and type the following:</p>
@@ -622,6 +646,7 @@ $<span class="w"> </span>~/.rhinocode/py39-rh8/python3.9<span class="w"> </span>
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installation">Installation</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#alternative-method">Alternative Method</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#experimental-method">Experimental Method</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#verification">Verification</a></li>
 </ul>
   </nav></div>
